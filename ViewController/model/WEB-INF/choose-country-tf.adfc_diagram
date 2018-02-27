@@ -1,0 +1,51 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<SDM>
+   <OverallProperties
+      id="OverallProperties1"/>
+   <View
+      id="View2">
+      <property
+         name="activityId">countries</property>
+      <property
+         name="pageFragment">true</property>
+      <property
+         name="x">447.0</property>
+      <property
+         name="start">true</property>
+      <property
+         name="description">&lt;html>&lt;p>&lt;b>countries&lt;/b> (Default Activity)&lt;/p>&lt;p>Activity Type:  View&lt;/p></property>
+      <property
+         name="y">216.84473</property>
+      <property
+         name="page">/countries.jsff</property>
+      <property
+         name="exceptionHandler">false</property>
+   </View>
+   <TaskFlowCall
+      id="TaskFlowCall4">
+      <property
+         name="description">&lt;html>&lt;p>&lt;b>selected-country-tf&lt;/b>&lt;/p>&lt;p>Activity Type:  Task Flow Call&lt;/p></property>
+      <property
+         name="activityId">selected-country-tf</property>
+      <property
+         name="x">734.5615</property>
+      <property
+         name="y">184.0459</property>
+      <property
+         name="documentReference">/WEB-INF/selected-country-tf.xml</property>
+      <property
+         name="exceptionHandler">false</property>
+      <property
+         name="taskFlowId">selected-country-tf</property>
+   </TaskFlowCall>
+   <ControlFlowCase
+      islink="true"
+      id="ControlFlowCase5"
+      from="View2"
+      to="TaskFlowCall4">
+      <property
+         name="fromOutcome">go</property>
+      <property
+         name="sdm:polyPoints">R50,488.0,216.49414,693.5615,183.69531,L50</property>
+   </ControlFlowCase>
+</SDM>

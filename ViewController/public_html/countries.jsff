@@ -1,0 +1,69 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<ui:composition xmlns:ui="http://java.sun.com/jsf/facelets" xmlns:af="http://xmlns.oracle.com/adf/faces/rich"
+                xmlns:f="http://java.sun.com/jsf/core">
+    <af:panelGridLayout id="pgl1">
+        <af:gridRow height="50px" id="gr1">
+            <af:gridCell width="100%" halign="stretch" valign="stretch" id="gc2">
+                <!-- Header -->
+                <af:button text="Go To Selected Country" id="b1" action="go">
+                    <af:setPropertyListener from="#{viewScope.passValuesBetweenTFs.countryNameBind.localValue}"
+                                            to="#{viewScope.passValuesBetweenTFs.countryNameVal}" type="action"/>
+                </af:button>
+            </af:gridCell>
+        </af:gridRow>
+        <af:gridRow height="100%" id="gr2">
+            <af:gridCell width="100%" halign="stretch" valign="stretch" id="gc1">
+                <!-- Content -->
+                <af:panelCollection id="pc1">
+                    <f:facet name="menus"/>
+                    <f:facet name="toolbar"/>
+                    <f:facet name="statusbar"/>
+                    <af:table value="#{bindings.CountriesToPassParamsInTFs.collectionModel}" var="row"
+                              rows="#{bindings.CountriesToPassParamsInTFs.rangeSize}"
+                              emptyText="#{bindings.CountriesToPassParamsInTFs.viewable ? 'No data to display.' : 'Access Denied.'}"
+                              rowBandingInterval="0"
+                              selectedRowKeys="#{bindings.CountriesToPassParamsInTFs.collectionModel.selectedRow}"
+                              selectionListener="#{bindings.CountriesToPassParamsInTFs.collectionModel.makeCurrent}"
+                              rowSelection="single" fetchSize="#{bindings.CountriesToPassParamsInTFs.rangeSize}"
+                              id="t1">
+                        <af:column headerText="#{bindings.CountriesToPassParamsInTFs.hints.CountryId.label}" id="c1">
+                            <af:inputText value="#{row.bindings.CountryId.inputValue}"
+                                          label="#{bindings.CountriesToPassParamsInTFs.hints.CountryId.label}"
+                                          required="#{bindings.CountriesToPassParamsInTFs.hints.CountryId.mandatory}"
+                                          columns="#{bindings.CountriesToPassParamsInTFs.hints.CountryId.displayWidth}"
+                                          maximumLength="#{bindings.CountriesToPassParamsInTFs.hints.CountryId.precision}"
+                                          shortDesc="#{bindings.CountriesToPassParamsInTFs.hints.CountryId.tooltip}"
+                                          id="it1">
+                                <f:validator binding="#{row.bindings.CountryId.validator}"/>
+                            </af:inputText>
+                        </af:column>
+                        <af:column headerText="#{bindings.CountriesToPassParamsInTFs.hints.CountryName.label}" id="c2">
+                            <af:inputText value="#{row.bindings.CountryName.inputValue}"
+                                          label="#{bindings.CountriesToPassParamsInTFs.hints.CountryName.label}"
+                                          required="#{bindings.CountriesToPassParamsInTFs.hints.CountryName.mandatory}"
+                                          columns="#{bindings.CountriesToPassParamsInTFs.hints.CountryName.displayWidth}"
+                                          maximumLength="#{bindings.CountriesToPassParamsInTFs.hints.CountryName.precision}"
+                                          shortDesc="#{bindings.CountriesToPassParamsInTFs.hints.CountryName.tooltip}"
+                                          id="it2" binding="#{viewScope.passValuesBetweenTFs.countryNameBind}">
+                                <f:validator binding="#{row.bindings.CountryName.validator}"/>
+                            </af:inputText>
+                        </af:column>
+                        <af:column headerText="#{bindings.CountriesToPassParamsInTFs.hints.RegionId.label}" id="c3">
+                            <af:inputText value="#{row.bindings.RegionId.inputValue}"
+                                          label="#{bindings.CountriesToPassParamsInTFs.hints.RegionId.label}"
+                                          required="#{bindings.CountriesToPassParamsInTFs.hints.RegionId.mandatory}"
+                                          columns="#{bindings.CountriesToPassParamsInTFs.hints.RegionId.displayWidth}"
+                                          maximumLength="#{bindings.CountriesToPassParamsInTFs.hints.RegionId.precision}"
+                                          shortDesc="#{bindings.CountriesToPassParamsInTFs.hints.RegionId.tooltip}"
+                                          id="it3">
+                                <f:validator binding="#{row.bindings.RegionId.validator}"/>
+                                <af:convertNumber groupingUsed="false"
+                                                  pattern="#{bindings.CountriesToPassParamsInTFs.hints.RegionId.format}"/>
+                            </af:inputText>
+                        </af:column>
+                    </af:table>
+                </af:panelCollection>
+            </af:gridCell>
+        </af:gridRow>
+    </af:panelGridLayout>
+</ui:composition>

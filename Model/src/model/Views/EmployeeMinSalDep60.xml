@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE ViewObject SYSTEM "jbo_03_01.dtd">
+<!---->
+<ViewObject
+  xmlns="http://xmlns.oracle.com/bc4j"
+  Name="EmployeeMinSalDep60"
+  Version="12.2.1.9.14"
+  InheritPersonalization="merge"
+  BindingStyle="OracleName"
+  CustomQuery="true"
+  FetchMode="FETCH_AS_NEEDED"
+  PageIterMode="Full">
+  <DesignTime>
+    <Attr Name="_isExpertMode" Value="true"/>
+  </DesignTime>
+  <Properties>
+    <SchemaBasedProperties>
+      <LABEL
+        ResId="model.Views.EmployeeMinSalDep60_LABEL"/>
+    </SchemaBasedProperties>
+  </Properties>
+  <SQLQuery><![CDATA[select min(Salary)*2 Min_Sal from Employees  
+where Department_id = 60]]></SQLQuery>
+  <ViewAttribute
+    Name="MinSal"
+    IsUpdateable="false"
+    IsPersistent="false"
+    PrecisionRule="true"
+    Type="oracle.jbo.domain.Number"
+    ColumnType="NUMBER"
+    AliasName="MIN_SAL"
+    Expression="MIN_SAL"
+    SQLType="NUMERIC"/>
+  <ResourceBundle>
+    <PropertiesBundle
+      PropertiesFile="model.ModelBundle"/>
+  </ResourceBundle>
+</ViewObject>

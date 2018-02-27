@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<pageDefinition xmlns="http://xmlns.oracle.com/adfm/uimodel" version="12.2.1.9.14" id="insertingValsPageDef"
+                Package="view.pageDefs">
+  <parameters/>
+  <executables>
+    <variableIterator id="variables">
+      <variableUsage DataControl="AppModuleAMDataControl" Binds="EmpData.variablesMap.empIdParam"
+                     Name="ExecuteWithParams_empIdParam" IsQueriable="false"/>
+    </variableIterator>
+    <iterator Binds="EmpData" RangeSize="25" DataControl="AppModuleAMDataControl" id="EmpDataIterator"/>
+  </executables>
+  <bindings>
+    <action IterBinding="EmpDataIterator" id="ExecuteWithParams" RequiresUpdateModel="true" Action="executeWithParams">
+      <NamedData NDName="empIdParam" NDType="oracle.jbo.domain.Number"
+                 NDValue="${bindings.ExecuteWithParams_empIdParam}"/>
+    </action>
+    <attributeValues IterBinding="variables" id="empIdParam">
+      <AttrNames>
+        <Item Value="ExecuteWithParams_empIdParam"/>
+      </AttrNames>
+    </attributeValues>
+  </bindings>
+</pageDefinition>

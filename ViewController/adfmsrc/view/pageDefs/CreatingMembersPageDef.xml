@@ -1,0 +1,215 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<pageDefinition xmlns="http://xmlns.oracle.com/adfm/uimodel" version="12.2.1.9.14" id="CreatingMembersPageDef"
+                Package="view.pageDefs">
+  <parameters/>
+  <executables>
+    <variableIterator id="variables">
+      <variable Type="java.lang.String" Name="createAndInitRowNewMemeber_fName" IsQueriable="false"/>
+      <variable Type="java.lang.String" Name="createAndInitRowNewMemeber_LName" IsQueriable="false"/>
+      <variable Type="oracle.jbo.domain.Number" Name="createAndInitRowNewMemeber_Mobile" IsQueriable="false"/>
+      <variable Type="java.lang.String" Name="createAndInitRowNewMemeber_email" IsQueriable="false"/>
+      <variable Type="java.lang.String" Name="createAndInitRowNewMemeber_Gender" IsQueriable="false"/>
+      <variable Type="java.lang.String" Name="createAndInitRowNewMemeber_SecQues" IsQueriable="false"/>
+      <variable Type="java.lang.String" Name="createAndInitRowNewMemeber_QuesAnswer" IsQueriable="false"/>
+      <variable Type="java.lang.String" Name="createAndInitRowNewMemeber_Pass" IsQueriable="false"/>
+      <variable Type="java.lang.String" Name="createAndInitRowNewMemeber_userName" IsQueriable="false"/>
+      <variable Type="java.lang.String" Name="createNewMemeberAM_fName" IsQueriable="false"/>
+      <variable Type="java.lang.String" Name="createNewMemeberAM_LName" IsQueriable="false"/>
+      <variable Type="oracle.jbo.domain.Number" Name="createNewMemeberAM_Mobile" IsQueriable="false"/>
+      <variable Type="java.lang.String" Name="createNewMemeberAM_email" IsQueriable="false"/>
+      <variable Type="java.lang.String" Name="createNewMemeberAM_Gender" IsQueriable="false"/>
+      <variable Type="java.lang.String" Name="createNewMemeberAM_SecQues" IsQueriable="false"/>
+      <variable Type="java.lang.String" Name="createNewMemeberAM_QuesAnswer" IsQueriable="false"/>
+      <variable Type="java.lang.String" Name="createNewMemeberAM_Pass" IsQueriable="false"/>
+      <variable Type="java.lang.String" Name="createNewMemeberAM_userName" IsQueriable="false"/>
+      <variable Type="java.lang.String" Name="createNewMemeberVROW_fName" IsQueriable="false"/>
+      <variable Type="java.lang.String" Name="createNewMemeberVROW_LName" IsQueriable="false"/>
+      <variable Type="oracle.jbo.domain.Number" Name="createNewMemeberVROW_Mobile" IsQueriable="false"/>
+      <variable Type="java.lang.String" Name="createNewMemeberVROW_email" IsQueriable="false"/>
+      <variable Type="java.lang.String" Name="createNewMemeberVROW_Gender" IsQueriable="false"/>
+      <variable Type="java.lang.String" Name="createNewMemeberVROW_SecQues" IsQueriable="false"/>
+      <variable Type="java.lang.String" Name="createNewMemeberVROW_QuesAnswer" IsQueriable="false"/>
+      <variable Type="java.lang.String" Name="createNewMemeberVROW_Pass" IsQueriable="false"/>
+      <variable Type="java.lang.String" Name="createNewMemeberVROW_userName" IsQueriable="false"/>
+    </variableIterator>
+  </executables>
+  <bindings>
+    <methodAction id="createAndInitRowNewMemeber" RequiresUpdateModel="true" Action="invokeMethod"
+                  MethodName="createAndInitRowNewMemeber" IsViewObjectMethod="false"
+                  DataControl="AppModuleAMDataControl"
+                  InstanceName="bindings.createAndInitRowNewMemeber.dataControl.dataProvider">
+      <NamedData NDName="fName" NDType="java.lang.String" NDValue="${bindings.createAndInitRowNewMemeber_fName}"/>
+      <NamedData NDName="LName" NDType="java.lang.String" NDValue="${bindings.createAndInitRowNewMemeber_LName}"/>
+      <NamedData NDName="Mobile" NDType="oracle.jbo.domain.Number"
+                 NDValue="${bindings.createAndInitRowNewMemeber_Mobile}"/>
+      <NamedData NDName="email" NDType="java.lang.String" NDValue="${bindings.createAndInitRowNewMemeber_email}"/>
+      <NamedData NDName="Gender" NDType="java.lang.String" NDValue="${bindings.createAndInitRowNewMemeber_Gender}"/>
+      <NamedData NDName="SecQues" NDType="java.lang.String" NDValue="${bindings.createAndInitRowNewMemeber_SecQues}"/>
+      <NamedData NDName="QuesAnswer" NDType="java.lang.String"
+                 NDValue="${bindings.createAndInitRowNewMemeber_QuesAnswer}"/>
+      <NamedData NDName="Pass" NDType="java.lang.String" NDValue="${bindings.createAndInitRowNewMemeber_Pass}"/>
+      <NamedData NDName="userName" NDType="java.lang.String" NDValue="${bindings.createAndInitRowNewMemeber_userName}"/>
+    </methodAction>
+    <attributeValues IterBinding="variables" id="fName">
+      <AttrNames>
+        <Item Value="createAndInitRowNewMemeber_fName"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="variables" id="LName">
+      <AttrNames>
+        <Item Value="createAndInitRowNewMemeber_LName"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="variables" id="Mobile">
+      <AttrNames>
+        <Item Value="createAndInitRowNewMemeber_Mobile"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="variables" id="email">
+      <AttrNames>
+        <Item Value="createAndInitRowNewMemeber_email"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="variables" id="Gender">
+      <AttrNames>
+        <Item Value="createAndInitRowNewMemeber_Gender"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="variables" id="SecQues">
+      <AttrNames>
+        <Item Value="createAndInitRowNewMemeber_SecQues"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="variables" id="QuesAnswer">
+      <AttrNames>
+        <Item Value="createAndInitRowNewMemeber_QuesAnswer"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="variables" id="Pass">
+      <AttrNames>
+        <Item Value="createAndInitRowNewMemeber_Pass"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="variables" id="userName">
+      <AttrNames>
+        <Item Value="createAndInitRowNewMemeber_userName"/>
+      </AttrNames>
+    </attributeValues>
+    <methodAction id="createNewMemeberAM" RequiresUpdateModel="true" Action="invokeMethod"
+                  MethodName="createNewMemeberAM" IsViewObjectMethod="false" DataControl="AppModuleAMDataControl"
+                  InstanceName="bindings.createNewMemeberAM.dataControl.dataProvider">
+      <NamedData NDName="fName" NDType="java.lang.String" NDValue="${bindings.createNewMemeberAM_fName}"/>
+      <NamedData NDName="LName" NDType="java.lang.String" NDValue="${bindings.createNewMemeberAM_LName}"/>
+      <NamedData NDName="Mobile" NDType="oracle.jbo.domain.Number" NDValue="${bindings.createNewMemeberAM_Mobile}"/>
+      <NamedData NDName="email" NDType="java.lang.String" NDValue="${bindings.createNewMemeberAM_email}"/>
+      <NamedData NDName="Gender" NDType="java.lang.String" NDValue="${bindings.createNewMemeberAM_Gender}"/>
+      <NamedData NDName="SecQues" NDType="java.lang.String" NDValue="${bindings.createNewMemeberAM_SecQues}"/>
+      <NamedData NDName="QuesAnswer" NDType="java.lang.String" NDValue="${bindings.createNewMemeberAM_QuesAnswer}"/>
+      <NamedData NDName="Pass" NDType="java.lang.String" NDValue="${bindings.createNewMemeberAM_Pass}"/>
+      <NamedData NDName="userName" NDType="java.lang.String" NDValue="${bindings.createNewMemeberAM_userName}"/>
+    </methodAction>
+    <attributeValues IterBinding="variables" id="fName1">
+      <AttrNames>
+        <Item Value="createNewMemeberAM_fName"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="variables" id="LName1">
+      <AttrNames>
+        <Item Value="createNewMemeberAM_LName"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="variables" id="Mobile1">
+      <AttrNames>
+        <Item Value="createNewMemeberAM_Mobile"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="variables" id="email1">
+      <AttrNames>
+        <Item Value="createNewMemeberAM_email"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="variables" id="Gender1">
+      <AttrNames>
+        <Item Value="createNewMemeberAM_Gender"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="variables" id="SecQues1">
+      <AttrNames>
+        <Item Value="createNewMemeberAM_SecQues"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="variables" id="QuesAnswer1">
+      <AttrNames>
+        <Item Value="createNewMemeberAM_QuesAnswer"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="variables" id="Pass1">
+      <AttrNames>
+        <Item Value="createNewMemeberAM_Pass"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="variables" id="userName1">
+      <AttrNames>
+        <Item Value="createNewMemeberAM_userName"/>
+      </AttrNames>
+    </attributeValues>
+    <methodAction id="createNewMemeberVROW" RequiresUpdateModel="true" Action="invokeMethod"
+                  MethodName="createNewMemeberVROW" IsViewObjectMethod="false" DataControl="AppModuleAMDataControl"
+                  InstanceName="bindings.createNewMemeberVROW.dataControl.dataProvider">
+      <NamedData NDName="fName" NDType="java.lang.String" NDValue="${bindings.createNewMemeberVROW_fName}"/>
+      <NamedData NDName="LName" NDType="java.lang.String" NDValue="${bindings.createNewMemeberVROW_LName}"/>
+      <NamedData NDName="Mobile" NDType="oracle.jbo.domain.Number" NDValue="${bindings.createNewMemeberVROW_Mobile}"/>
+      <NamedData NDName="email" NDType="java.lang.String" NDValue="${bindings.createNewMemeberVROW_email}"/>
+      <NamedData NDName="Gender" NDType="java.lang.String" NDValue="${bindings.createNewMemeberVROW_Gender}"/>
+      <NamedData NDName="SecQues" NDType="java.lang.String" NDValue="${bindings.createNewMemeberVROW_SecQues}"/>
+      <NamedData NDName="QuesAnswer" NDType="java.lang.String" NDValue="${bindings.createNewMemeberVROW_QuesAnswer}"/>
+      <NamedData NDName="Pass" NDType="java.lang.String" NDValue="${bindings.createNewMemeberVROW_Pass}"/>
+      <NamedData NDName="userName" NDType="java.lang.String" NDValue="${bindings.createNewMemeberVROW_userName}"/>
+    </methodAction>
+    <attributeValues IterBinding="variables" id="fName2">
+      <AttrNames>
+        <Item Value="createNewMemeberVROW_fName"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="variables" id="LName2">
+      <AttrNames>
+        <Item Value="createNewMemeberVROW_LName"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="variables" id="Mobile2">
+      <AttrNames>
+        <Item Value="createNewMemeberVROW_Mobile"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="variables" id="email2">
+      <AttrNames>
+        <Item Value="createNewMemeberVROW_email"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="variables" id="Gender2">
+      <AttrNames>
+        <Item Value="createNewMemeberVROW_Gender"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="variables" id="SecQues2">
+      <AttrNames>
+        <Item Value="createNewMemeberVROW_SecQues"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="variables" id="QuesAnswer2">
+      <AttrNames>
+        <Item Value="createNewMemeberVROW_QuesAnswer"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="variables" id="Pass2">
+      <AttrNames>
+        <Item Value="createNewMemeberVROW_Pass"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="variables" id="userName2">
+      <AttrNames>
+        <Item Value="createNewMemeberVROW_userName"/>
+      </AttrNames>
+    </attributeValues>
+  </bindings>
+</pageDefinition>

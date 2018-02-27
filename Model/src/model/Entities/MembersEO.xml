@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE Entity SYSTEM "jbo_03_01.dtd">
+<!---->
+<Entity
+  xmlns="http://xmlns.oracle.com/bc4j"
+  Name="MembersEO"
+  Version="12.2.1.9.14"
+  InheritPersonalization="merge"
+  DBObjectType="table"
+  DBObjectName="MEMBERS"
+  AliasName="MembersEO"
+  BindingStyle="OracleName"
+  RowClass="model.Entities.MembersEOImpl">
+  <DesignTime>
+    <Attr Name="_codeGenFlag2" Value="Init|Access"/>
+    <Attr Name="_isCodegen" Value="true"/>
+  </DesignTime>
+  <Attribute
+    Name="FirstName"
+    Precision="40"
+    ColumnName="FIRST_NAME"
+    SQLType="VARCHAR"
+    Type="java.lang.String"
+    ColumnType="VARCHAR2"
+    TableName="MEMBERS">
+    <DesignTime>
+      <Attr Name="_DisplaySize" Value="40"/>
+    </DesignTime>
+  </Attribute>
+  <Attribute
+    Name="LastName"
+    Precision="40"
+    ColumnName="LAST_NAME"
+    SQLType="VARCHAR"
+    Type="java.lang.String"
+    ColumnType="VARCHAR2"
+    TableName="MEMBERS">
+    <DesignTime>
+      <Attr Name="_DisplaySize" Value="40"/>
+    </DesignTime>
+  </Attribute>
+  <Attribute
+    Name="Mobile"
+    ColumnName="MOBILE"
+    SQLType="NUMERIC"
+    Type="oracle.jbo.domain.Number"
+    ColumnType="NUMBER"
+    TableName="MEMBERS"/>
+  <Attribute
+    Name="Email"
+    Precision="40"
+    ColumnName="EMAIL"
+    SQLType="VARCHAR"
+    Type="java.lang.String"
+    ColumnType="VARCHAR2"
+    TableName="MEMBERS">
+    <DesignTime>
+      <Attr Name="_DisplaySize" Value="40"/>
+    </DesignTime>
+  </Attribute>
+  <Attribute
+    Name="Gender"
+    Precision="20"
+    ColumnName="GENDER"
+    SQLType="VARCHAR"
+    Type="java.lang.String"
+    ColumnType="VARCHAR2"
+    TableName="MEMBERS">
+    <DesignTime>
+      <Attr Name="_DisplaySize" Value="20"/>
+    </DesignTime>
+  </Attribute>
+  <Attribute
+    Name="SecurityQuestion"
+    Precision="50"
+    ColumnName="SECURITY_QUESTION"
+    SQLType="VARCHAR"
+    Type="java.lang.String"
+    ColumnType="VARCHAR2"
+    TableName="MEMBERS">
+    <DesignTime>
+      <Attr Name="_DisplaySize" Value="50"/>
+    </DesignTime>
+  </Attribute>
+  <Attribute
+    Name="QuestionAnswer"
+    Precision="30"
+    ColumnName="QUESTION_ANSWER"
+    SQLType="VARCHAR"
+    Type="java.lang.String"
+    ColumnType="VARCHAR2"
+    TableName="MEMBERS">
+    <DesignTime>
+      <Attr Name="_DisplaySize" Value="30"/>
+    </DesignTime>
+  </Attribute>
+  <Attribute
+    Name="Password"
+    Precision="7"
+    ColumnName="PASSWORD"
+    SQLType="VARCHAR"
+    Type="java.lang.String"
+    ColumnType="VARCHAR2"
+    TableName="MEMBERS">
+    <DesignTime>
+      <Attr Name="_DisplaySize" Value="7"/>
+    </DesignTime>
+  </Attribute>
+  <Attribute
+    Name="User1"
+    Precision="20"
+    ColumnName='"USER"'
+    SQLType="VARCHAR"
+    Type="java.lang.String"
+    ColumnType="VARCHAR2"
+    TableName="MEMBERS">
+    <DesignTime>
+      <Attr Name="_DisplaySize" Value="20"/>
+    </DesignTime>
+  </Attribute>
+  <Attribute
+    Name="Id"
+    ColumnName="ID"
+    SQLType="NUMERIC"
+    Type="oracle.jbo.domain.Number"
+    ColumnType="NUMBER"
+    TableName="MEMBERS"
+    PrimaryKey="true"/>
+  <Key
+    Name="MemberseoPrimaryKey"
+    PrimaryKey="true">
+    <DesignTime>
+      <Attr Name="_DBObjectName" Value="MEMBERSEO_PRIMARY_KEY"/>
+    </DesignTime>
+    <AttrArray Name="Attributes">
+      <Item Value="model.Entities.MembersEO.Id"/>
+    </AttrArray>
+  </Key>
+</Entity>

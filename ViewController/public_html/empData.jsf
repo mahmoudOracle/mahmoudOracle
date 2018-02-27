@@ -1,0 +1,62 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE html>
+<f:view xmlns:f="http://java.sun.com/jsf/core" xmlns:af="http://xmlns.oracle.com/adf/faces/rich">
+    <af:document title="empData.jsf" id="d1">
+        <af:messages id="m1"/>
+        <af:form id="f1">
+            <af:panelStretchLayout id="psl1">
+                <f:facet name="start"/>
+                <f:facet name="end"/>
+                <f:facet name="top"/>
+                <f:facet name="bottom"/>
+                <f:facet name="center">
+                    <af:panelFormLayout id="pfl1">
+                        <f:facet name="footer">
+                            <af:button text="createNewMemeberAM" id="b1"
+                                       actionListener="#{bindings.createNewMemeberAM.execute}"/>
+                            <af:button text="createNewMemeberVROW" id="b3"
+                                       actionListener="#{bindings.createNewMemeberVROW.execute}"/>
+                            <af:button text="createAndInitRowNewMemeber" id="b2"
+                                       actionListener="#{bindings.createAndInitRowNewMemeber.execute}"/>
+                        </f:facet>
+                        <af:inputText label="First Name" id="it1" value="#{backingBeanScope.login.fname}"/>
+                        <af:inputText label="Last Name" id="it2" value="#{backingBeanScope.login.lname}"/>
+                        <af:inputText label="Mobile" id="it3" value="#{backingBeanScope.login.mobileNo}"/>
+                        <af:inputText label="Email" id="it4" value="#{backingBeanScope.login.email}"/>
+                        <af:inputDate label="Date Of Birth" id="id1" value="#{backingBeanScope.login.dob}"/>
+                        <af:selectOneChoice label="Security Questions" id="soc3"
+                                            value="#{backingBeanScope.login.securityQuestion}">
+                            <af:selectItem label="What is ur Favorite Book?" value="What is ur Favorite Book?"
+                                           id="si8"/>
+                            <af:selectItem label="What is ur Favourite Sport?" value="What is ur Favourite Sport?"
+                                           id="si9"/>
+                            <af:selectItem label="What is your Favourite Movie?" value="What is your Favourite Movie?"
+                                           id="si10"/>
+                            <af:selectItem label="What is ur Nick Name?" value="What is ur Nick Name?" id="si11"/>
+                            <af:selectItem label="What is the name of ur best Friend?"
+                                           value="What is the name of ur best Friend?" id="si12"/>
+                        </af:selectOneChoice>
+                        <af:inputText label="Answer" id="it6" value="#{backingBeanScope.login.questionAnswer}"/>
+                        <af:selectOneChoice label="City" id="soc1" value="#{backingBeanScope.login.city}">
+                            <af:selectItem label="Riyadh" value="RUH" id="si1"/>
+                            <af:selectItem label="Dammam" value="DMM" id="si2"/>
+                            <af:selectItem label="Khobar" value="KHB" id="si3"/>
+                            <af:selectItem label="jubail" value="JBL" id="si4"/>
+                            <af:selectItem label="Jeddah" value="JED" id="si5"/>
+                        </af:selectOneChoice>
+                        <af:selectOneChoice label="Gender" id="soc2" value="#{backingBeanScope.login.gender}">
+                            <af:selectItem label="MALE" value="M" id="si6"/>
+                            <af:selectItem label="FEMALE" value="F" id="si7"/>
+                        </af:selectOneChoice>
+                        <af:inputText label="User Name" id="it8" value="#{backingBeanScope.login.user}"/>
+                        <af:inputText id="it7" value="#{backingBeanScope.login.pass}" label="Password" autoSubmit="true"
+                                      binding="#{backingBeanScope.login.passField}"/>
+                        <af:inputText label="confirmPass" id="it5" value="#{backingBeanScope.login.confirmPass}" autoSubmit="true"
+                                      validator="#{backingBeanScope.login.validatePasswordConfirmPass}"/>
+                        <af:activeOutputText id="aot1" value="#{login.outPut}" partialTriggers="b1"/>
+                    </af:panelFormLayout>
+                </f:facet>
+            </af:panelStretchLayout>
+        </af:form>
+    </af:document>
+</f:view>

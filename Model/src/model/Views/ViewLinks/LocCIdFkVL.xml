@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE ViewLink SYSTEM "jbo_03_01.dtd">
+<!---->
+<ViewLink
+  xmlns="http://xmlns.oracle.com/bc4j"
+  Name="LocCIdFkVL"
+  Version="12.2.1.9.14"
+  InheritPersonalization="merge"
+  EntityAssociation="model.Entities.Associations.LocCIdFkAss">
+  <ViewLinkDefEnd
+    Name="Countries"
+    Cardinality="1"
+    Source="true"
+    Owner="model.Views.CountriesVO">
+    <DesignTime>
+      <Attr Name="_isUpdateable" Value="true"/>
+      <Attr Name="_finderName" Value="Countries"/>
+    </DesignTime>
+    <AttrArray Name="Attributes">
+      <Item Value="model.Views.CountriesVO.CountryId"/>
+    </AttrArray>
+  </ViewLinkDefEnd>
+  <ViewLinkDefEnd
+    Name="Locations"
+    Cardinality="-1"
+    Owner="model.Views.LocationsVO">
+    <DesignTime>
+      <Attr Name="_isUpdateable" Value="true"/>
+      <Attr Name="_finderName" Value="Locations"/>
+    </DesignTime>
+    <AttrArray Name="Attributes">
+      <Item Value="model.Views.LocationsVO.CountryId"/>
+    </AttrArray>
+  </ViewLinkDefEnd>
+</ViewLink>

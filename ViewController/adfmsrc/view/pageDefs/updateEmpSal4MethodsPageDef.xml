@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<pageDefinition xmlns="http://xmlns.oracle.com/adfm/uimodel" version="12.2.1.9.14" id="updateEmpSal4MethodsPageDef"
+                Package="view.pageDefs">
+  <parameters/>
+  <executables>
+    <variableIterator id="variables">
+      <variable Type="oracle.jbo.domain.Number" Name="updateEmployeesSal_return" IsQueriable="false" IsUpdateable="0"
+                DefaultValue="${bindings.updateEmployeesSal.result}"/>
+      <variable Type="oracle.jbo.domain.Number" Name="updateEmployeesSal_upd" IsQueriable="false"/>
+      <variable Type="oracle.jbo.domain.Number" Name="updateEmployeesSal1_return" IsQueriable="false" IsUpdateable="0"
+                DefaultValue="${bindings.updateEmployeesSal1.result}"/>
+      <variable Type="oracle.jbo.domain.Number" Name="updateEmployeesSal1_upd" IsQueriable="false"/>
+      <variable Type="oracle.jbo.domain.Number" Name="updateEmployeesSal2_return" IsQueriable="false" IsUpdateable="0"
+                DefaultValue="${bindings.updateEmployeesSal2.result}"/>
+      <variable Type="oracle.jbo.domain.Number" Name="updateEmployeesSal2_upd" IsQueriable="false"/>
+      <variable Type="oracle.jbo.domain.Number" Name="updateEmployeesSal3_return" IsQueriable="false" IsUpdateable="0"
+                DefaultValue="${bindings.updateEmployeesSal3.result}"/>
+      <variable Type="oracle.jbo.domain.Number" Name="updateEmployeesSal3_upd" IsQueriable="false"/>
+      <variable Type="oracle.jbo.domain.Number" Name="updateEmployeesSal4_return" IsQueriable="false" IsUpdateable="0"
+                DefaultValue="${bindings.updateEmployeesSal4.result}"/>
+      <variable Type="oracle.jbo.domain.Number" Name="updateEmployeesSal4_upd" IsQueriable="false"/>
+    </variableIterator>
+    <iterator Binds="Departments1" RangeSize="25" DataControl="AppModuleAMDataControl" id="Departments1Iterator"
+              ChangeEventPolicy="ppr"/>
+    <iterator Binds="Employees1" RangeSize="25" DataControl="AppModuleAMDataControl" id="Employees1Iterator"
+              ChangeEventPolicy="ppr"/>
+  </executables>
+  <bindings>
+    <action IterBinding="Departments1Iterator" id="First" RequiresUpdateModel="true" Action="first"/>
+    <action IterBinding="Departments1Iterator" id="Previous" RequiresUpdateModel="true" Action="previous"/>
+    <action IterBinding="Departments1Iterator" id="Next" RequiresUpdateModel="true" Action="next"/>
+    <action IterBinding="Departments1Iterator" id="Last" RequiresUpdateModel="true" Action="last"/>
+    <attributeValues IterBinding="Departments1Iterator" id="DepartmentId">
+      <AttrNames>
+        <Item Value="DepartmentId"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="Departments1Iterator" id="DepartmentName">
+      <AttrNames>
+        <Item Value="DepartmentName"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="Departments1Iterator" id="ManagerId">
+      <AttrNames>
+        <Item Value="ManagerId"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="Departments1Iterator" id="LocationId">
+      <AttrNames>
+        <Item Value="LocationId"/>
+      </AttrNames>
+    </attributeValues>
+    <tree IterBinding="Employees1Iterator" id="Employees1">
+      <nodeDefinition DefName="model.Views.EmployeesVO" Name="Employees10">
+        <AttrNames>
+          <Item Value="EmployeeId"/>
+          <Item Value="FirstName"/>
+          <Item Value="LastName"/>
+          <Item Value="Email"/>
+          <Item Value="PhoneNumber"/>
+          <Item Value="HireDate"/>
+          <Item Value="JobId"/>
+          <Item Value="Salary"/>
+          <Item Value="CommissionPct"/>
+          <Item Value="ManagerId"/>
+          <Item Value="DepartmentId"/>
+          <Item Value="EmpStatus"/>
+          <Item Value="Password"/>
+        </AttrNames>
+      </nodeDefinition>
+    </tree>
+    <methodAction IterBinding="Departments1Iterator" id="updateEmployeesSal" RequiresUpdateModel="true"
+                  Action="invokeMethod" MethodName="updateEmployeesSal" IsViewObjectMethod="false"
+                  DataControl="AppModuleAMDataControl" InstanceName="bindings.Departments1Iterator.currentRow"
+                  IsLocalObjectReference="true"
+                  ReturnName="data.AppModuleAMDataControl.methodResults.updateEmployeesSal_updateEmployeesSal_updateEmployeesSal_result">
+      <NamedData NDName="upd" NDType="oracle.jbo.domain.Number" NDValue="${bindings.updateEmployeesSal_upd}"/>
+    </methodAction>
+    <attributeValues IterBinding="variables" id="upd">
+      <AttrNames>
+        <Item Value="updateEmployeesSal_upd"/>
+      </AttrNames>
+    </attributeValues>
+    <methodAction IterBinding="Departments1Iterator" id="updateEmployeesSal1" RequiresUpdateModel="true"
+                  Action="invokeMethod" MethodName="updateEmployeesSal1" IsViewObjectMethod="false"
+                  DataControl="AppModuleAMDataControl" InstanceName="bindings.Departments1Iterator.currentRow"
+                  IsLocalObjectReference="true"
+                  ReturnName="data.AppModuleAMDataControl.methodResults.updateEmployeesSal1_updateEmployeesSal1_updateEmployeesSal1_result">
+      <NamedData NDName="upd" NDType="oracle.jbo.domain.Number" NDValue="${bindings.updateEmployeesSal1_upd}"/>
+    </methodAction>
+    <attributeValues IterBinding="variables" id="upd1">
+      <AttrNames>
+        <Item Value="updateEmployeesSal1_upd"/>
+      </AttrNames>
+    </attributeValues>
+    <methodAction IterBinding="Departments1Iterator" id="updateEmployeesSal2" RequiresUpdateModel="true"
+                  Action="invokeMethod" MethodName="updateEmployeesSal2" IsViewObjectMethod="false"
+                  DataControl="AppModuleAMDataControl" InstanceName="bindings.Departments1Iterator.currentRow"
+                  IsLocalObjectReference="true"
+                  ReturnName="data.AppModuleAMDataControl.methodResults.updateEmployeesSal2_updateEmployeesSal2_updateEmployeesSal2_result">
+      <NamedData NDName="upd" NDType="oracle.jbo.domain.Number" NDValue="${bindings.updateEmployeesSal2_upd}"/>
+    </methodAction>
+    <attributeValues IterBinding="variables" id="upd2">
+      <AttrNames>
+        <Item Value="updateEmployeesSal2_upd"/>
+      </AttrNames>
+    </attributeValues>
+    <methodAction IterBinding="Departments1Iterator" id="updateEmployeesSal3" RequiresUpdateModel="true"
+                  Action="invokeMethod" MethodName="updateEmployeesSal3" IsViewObjectMethod="false"
+                  DataControl="AppModuleAMDataControl" InstanceName="bindings.Departments1Iterator.currentRow"
+                  IsLocalObjectReference="true"
+                  ReturnName="data.AppModuleAMDataControl.methodResults.updateEmployeesSal3_updateEmployeesSal3_updateEmployeesSal3_result">
+      <NamedData NDName="upd" NDType="oracle.jbo.domain.Number" NDValue="${bindings.updateEmployeesSal3_upd}"/>
+    </methodAction>
+    <attributeValues IterBinding="variables" id="upd3">
+      <AttrNames>
+        <Item Value="updateEmployeesSal3_upd"/>
+      </AttrNames>
+    </attributeValues>
+    <tree IterBinding="Employees1Iterator" id="Employees11">
+      <nodeDefinition DefName="model.Views.EmployeesVO" Name="Employees110">
+        <AttrNames>
+          <Item Value="EmployeeId"/>
+          <Item Value="FirstName"/>
+          <Item Value="LastName"/>
+          <Item Value="Email"/>
+          <Item Value="PhoneNumber"/>
+          <Item Value="HireDate"/>
+          <Item Value="JobId"/>
+          <Item Value="Salary"/>
+          <Item Value="CommissionPct"/>
+          <Item Value="ManagerId"/>
+          <Item Value="DepartmentId"/>
+          <Item Value="EmpStatus"/>
+          <Item Value="Password"/>
+        </AttrNames>
+      </nodeDefinition>
+    </tree>
+    <methodAction IterBinding="Departments1Iterator" id="updateEmployeesSal4" RequiresUpdateModel="true"
+                  Action="invokeMethod" MethodName="updateEmployeesSal4" IsViewObjectMethod="false"
+                  DataControl="AppModuleAMDataControl" InstanceName="bindings.Departments1Iterator.currentRow"
+                  IsLocalObjectReference="true"
+                  ReturnName="data.AppModuleAMDataControl.methodResults.updateEmployeesSal4_updateEmployeesSal4_updateEmployeesSal4_result">
+      <NamedData NDName="upd" NDType="oracle.jbo.domain.Number" NDValue="${bindings.updateEmployeesSal4_upd}"/>
+    </methodAction>
+    <attributeValues IterBinding="variables" id="upd4">
+      <AttrNames>
+        <Item Value="updateEmployeesSal4_upd"/>
+      </AttrNames>
+    </attributeValues>
+  </bindings>
+</pageDefinition>

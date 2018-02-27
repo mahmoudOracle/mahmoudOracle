@@ -1,0 +1,85 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE html>
+<f:view xmlns:f="http://java.sun.com/jsf/core" xmlns:af="http://xmlns.oracle.com/adf/faces/rich">
+    <af:document title="empData2.jsf" id="d1">
+        <af:form id="f1">
+            <af:panelSplitter orientation="horizontal" splitterPosition="100" id="ps2">
+                <f:facet name="first"/>
+                <f:facet name="second">
+                    <af:panelSplitter orientation="horizontal" splitterPosition="100" positionedFromEnd="true" id="ps1">
+                        <f:facet name="first">
+                            <af:panelFormLayout id="pfl1" maxColumns="4">
+                                <f:facet name="footer"/>
+                                <af:button text="Set Cookie Value" id="b3"
+                                           actionListener="#{viewScope.empData2Bean.settingCookieValue}"/>
+                                <af:inputText label="First Name" id="it1"/>
+                                <af:inputText label="Last Name" id="it2"/>
+                                <af:inputText label="Mobile" id="it3"/>
+                                <af:inputText label="Email" id="it4"/>
+                                <af:inputDate label="Date Of Birth" id="id1"/>
+                                <af:selectOneChoice label="Security Questions" id="soc3">
+                                    <af:selectItem label="What is ur Favorite Book?" value="What is ur Favorite Book?"
+                                                   id="si8"/>
+                                    <af:selectItem label="What is ur Favourite Sport?"
+                                                   value="What is ur Favourite Sport?" id="si9"/>
+                                    <af:selectItem label="What is your Favourite Movie?"
+                                                   value="What is your Favourite Movie?" id="si10"/>
+                                    <af:selectItem label="What is ur Nick Name?" value="What is ur Nick Name?"
+                                                   id="si11"/>
+                                    <af:selectItem label="What is the name of ur best Friend?"
+                                                   value="What is the name of ur best Friend?" id="si12"/>
+                                </af:selectOneChoice>
+                                <af:inputText label="Answer" id="it6"/>
+                                <af:selectOneChoice label="City" id="soc1">
+                                    <af:selectItem label="Riyadh" value="RUH" id="si1"/>
+                                    <af:selectItem label="Dammam" value="DMM" id="si2"/>
+                                    <af:selectItem label="Khobar" value="KHB" id="si3"/>
+                                    <af:selectItem label="jubail" value="JBL" id="si4"/>
+                                    <af:selectItem label="Jeddah" value="JED" id="si5"/>
+                                </af:selectOneChoice>
+                                <af:selectOneChoice label="Gender" id="soc2">
+                                    <af:selectItem label="MALE" value="M" id="si6"/>
+                                    <af:selectItem label="FEMALE" value="F" id="si7"/>
+                                </af:selectOneChoice>
+                                <af:inputText label="User Name" id="it8"/>
+                                <af:spacer width="10" height="20" id="s2"/>
+                                <af:inputText id="it7" label="Password " autoSubmit="true"
+                                              value="#{viewScope.empData2Bean.password}"
+                                              binding="#{viewScope.empData2Bean.passworInputBind}"/>
+                                <af:inputText label="confirm Password" id="it5" autoSubmit="true"
+                                              value="#{viewScope.empData2Bean.confirmPassword}"
+                                              validator="#{viewScope.empData2Bean.validatePasswordAndConirm}"/>
+                                <af:outputText id="ot1" inlineStyle="font-size:large;"
+                                               value="#{requestScope.empData2Bean.password} &lt;&lt;&lt; PASSWORD VALUES >>> #{requestScope.empData2Bean.confirmPassword}"
+                                               partialTriggers="it7 it5"/>
+                                <af:button text="Check Password Data" id="b1"
+                                           actionListener="#{viewScope.empData2Bean.checkPasswordFieldsData}"/>
+                                <af:spacer width="10" height="20" id="s1"/>
+                                <af:inputText label="Email" id="it9" binding="#{viewScope.empData2Bean.mailBind}" autoSubmit="true">
+                                    <af:clientAttribute name="mail" value="m"/>
+                                </af:inputText>
+                                <af:inputText label="Confirm Email" id="it10"
+                                              binding="#{viewScope.empData2Bean.confirmMail}" autoSubmit="true"
+                                              validator="#{viewScope.empData2Bean.validateMail}"/>
+                                <af:outputText  id="ot2" inlineStyle="font-size:xx-large;"
+                                               partialTriggers="it9 it10"/>
+                                <af:button text="Confirm Pass" id="b2" actionListener="#{viewScope.empData2Bean.checkPssFields}"/>
+                                <af:spacer width="10" height="20" id="s3"/>
+                                <af:outputText value="Bind 1:#{viewScope.empData2Bean.mailBind.value}  &amp;&amp;&amp;&amp; #{viewScope.empData2Bean.confirmMail.value}" id="ot3"
+                                               partialTriggers="it9 it10"/>
+                                <af:spacer width="10" height="20" id="s5"/>
+                                <af:outputText value="Display Values From Mail Or Password:#{viewScope.empData2Bean.msg} OutPut is a property" id="ot4"
+                                               inlineStyle="font-size:x-large; width:60%;" partialTriggers="it10 it5"/>
+                                <af:spacer width="10" height="20" id="s4"/>
+                                <af:outputText value="Output Getts its value from Binding:" id="ot5"
+                                               inlineStyle="width:50%; font-size:x-large;"
+                                               binding="#{viewScope.empData2Bean.outBindToSetVal}"/>
+                            </af:panelFormLayout>
+                        </f:facet>
+                        <f:facet name="second"/>
+                    </af:panelSplitter>
+                </f:facet>
+            </af:panelSplitter>
+        </af:form>
+    </af:document>
+</f:view>

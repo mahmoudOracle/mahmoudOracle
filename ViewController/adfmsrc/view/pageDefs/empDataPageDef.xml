@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<pageDefinition xmlns="http://xmlns.oracle.com/adfm/uimodel" version="12.2.1.9.14" id="empDataPageDef"
+                Package="view.pageDefs">
+  <parameters/>
+  <executables>
+    <variableIterator id="variables"/>
+  </executables>
+  <bindings>
+    <methodAction id="createAndInitRowNewMemeber" RequiresUpdateModel="true" Action="invokeMethod"
+                  MethodName="createAndInitRowNewMemeber" IsViewObjectMethod="false"
+                  DataControl="AppModuleAMDataControl"
+                  InstanceName="bindings.createAndInitRowNewMemeber.dataControl.dataProvider">
+      <NamedData NDName="fName" NDValue="#{login.fname} " NDType="java.lang.String"/>
+      <NamedData NDName="LName" NDValue="#{login.lname}" NDType="java.lang.String"/>
+      <NamedData NDName="Mobile" NDValue="#{login.mobileNo}" NDType="oracle.jbo.domain.Number"/>
+      <NamedData NDName="email" NDValue="#{login.email}" NDType="java.lang.String"/>
+      <NamedData NDName="Gender" NDValue="#{login.gender}" NDType="java.lang.String"/>
+      <NamedData NDName="SecQues" NDValue="#{login.securityQuestion}" NDType="java.lang.String"/>
+      <NamedData NDName="QuesAnswer" NDValue="#{login.questionAnswer}" NDType="java.lang.String"/>
+      <NamedData NDName="Pass" NDValue="#{login.pass}" NDType="java.lang.String"/>
+      <NamedData NDName="userName" NDValue="#{login.user}" NDType="java.lang.String"/>
+    </methodAction>
+    <methodAction id="createNewMemeberAM" RequiresUpdateModel="true" Action="invokeMethod"
+                  MethodName="createNewMemeberAM" IsViewObjectMethod="false" DataControl="AppModuleAMDataControl"
+                  InstanceName="bindings.createNewMemeberAM.dataControl.dataProvider">
+      <NamedData NDName="fName" NDValue="#{login.fname} " NDType="java.lang.String"/>
+      <NamedData NDName="LName" NDValue="#{login.lname} " NDType="java.lang.String"/>
+      <NamedData NDName="Mobile" NDValue="#{login.mobileNo} " NDType="oracle.jbo.domain.Number"/>
+      <NamedData NDName="email" NDValue="#{login.email} " NDType="java.lang.String"/>
+      <NamedData NDName="Gender" NDValue="#{login.gender} " NDType="java.lang.String"/>
+      <NamedData NDName="SecQues" NDValue="#{login.securityQuestion} " NDType="java.lang.String"/>
+      <NamedData NDName="QuesAnswer" NDValue="#{login.questionAnswer} " NDType="java.lang.String"/>
+      <NamedData NDName="Pass" NDValue="#{login.pass} " NDType="java.lang.String"/>
+      <NamedData NDName="userName" NDValue="#{login.user}" NDType="java.lang.String"/>
+    </methodAction>
+    <methodAction id="createNewMemeberVROW" RequiresUpdateModel="true" Action="invokeMethod"
+                  MethodName="createNewMemeberVROW" IsViewObjectMethod="false" DataControl="AppModuleAMDataControl"
+                  InstanceName="bindings.createNewMemeberVROW.dataControl.dataProvider">
+      <NamedData NDName="fName" NDValue="#{login.fname} " NDType="java.lang.String"/>
+      <NamedData NDName="LName" NDValue="#{login.lname} " NDType="java.lang.String"/>
+      <NamedData NDName="Mobile" NDValue="#{login.mobileNo} " NDType="oracle.jbo.domain.Number"/>
+      <NamedData NDName="email" NDValue="#{login.email} " NDType="java.lang.String"/>
+      <NamedData NDName="Gender" NDValue="#{login.gender} " NDType="java.lang.String"/>
+      <NamedData NDName="SecQues" NDValue="#{login.securityQuestion} " NDType="java.lang.String"/>
+      <NamedData NDName="QuesAnswer" NDValue="#{login.questionAnswer} " NDType="java.lang.String"/>
+      <NamedData NDName="Pass" NDValue="#{login.pass} " NDType="java.lang.String"/>
+      <NamedData NDName="userName" NDValue="#{login.user}" NDType="java.lang.String"/>
+    </methodAction>
+  </bindings>
+</pageDefinition>

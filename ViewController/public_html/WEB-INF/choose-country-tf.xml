@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<adfc-config xmlns="http://xmlns.oracle.com/adf/controller" version="1.2">
+  <task-flow-definition id="choose-country-tf">
+    <default-activity>countries</default-activity>
+    <data-control-scope>
+      <shared/>
+    </data-control-scope>
+    <return-value-definition id="__6">
+      <name>selectedCountry</name>
+      <value>#{viewScope.passValuesBetweenTFs.countryNameVal}</value>
+    </return-value-definition>
+    <managed-bean id="__3">
+      <managed-bean-name>passValuesBetweenTFs</managed-bean-name>
+      <managed-bean-class>view.beans.PassValuesBetweenTFs</managed-bean-class>
+      <managed-bean-scope>view</managed-bean-scope>
+    </managed-bean>
+    <view id="countries">
+      <page>/countries.jsff</page>
+    </view>
+    <task-flow-call id="selected-country-tf">
+      <task-flow-reference>
+        <document>/WEB-INF/selected-country-tf.xml</document>
+        <id>selected-country-tf</id>
+      </task-flow-reference>
+    </task-flow-call>
+    <control-flow-rule id="__1">
+      <from-activity-id>countries</from-activity-id>
+      <control-flow-case id="__2">
+        <from-outcome>go</from-outcome>
+        <to-activity-id>selected-country-tf</to-activity-id>
+      </control-flow-case>
+    </control-flow-rule>
+    <use-page-fragments/>
+  </task-flow-definition>
+</adfc-config>

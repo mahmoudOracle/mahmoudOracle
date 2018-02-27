@@ -1,0 +1,29 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<ui:composition xmlns:ui="http://java.sun.com/jsf/facelets" xmlns:af="http://xmlns.oracle.com/adf/faces/rich"
+                xmlns:f="http://java.sun.com/jsf/core">
+    <af:panelGridLayout id="pgl1">
+        <af:gridRow height="50px" id="gr2">
+            <af:gridCell width="100%" halign="stretch" valign="stretch" id="gc1">
+                <af:button text="Go &amp; Check That Employee" id="b1" action="go"/>
+            </af:gridCell>
+        </af:gridRow>
+        <af:gridRow height="100%" id="gr1">
+            <af:gridCell width="100%" halign="stretch" valign="stretch" id="gc2">
+                <af:inputText label="Enter Employee ID" id="it1"
+                              value="#{pageFlowScope.executeWithParamsBean.empIdVal}"/>
+                <af:panelFormLayout id="pfl1">
+                    <af:inputText value="#{bindings.empIdParam.inputValue}" label="#{bindings.empIdParam.hints.label}"
+                                  required="#{bindings.empIdParam.hints.mandatory}"
+                                  columns="#{bindings.empIdParam.hints.displayWidth}"
+                                  maximumLength="#{bindings.empIdParam.hints.precision}"
+                                  shortDesc="#{bindings.empIdParam.hints.tooltip}" id="it2">
+                        <f:validator binding="#{bindings.empIdParam.validator}"/>
+                        <af:convertNumber groupingUsed="false" pattern="#{bindings.empIdParam.format}"/>
+                    </af:inputText>
+                    <af:button actionListener="#{bindings.ExecuteWithParams.execute}" text="ExecuteWithParams"
+                               disabled="#{!bindings.ExecuteWithParams.enabled}" id="b2" action="goEmp"/>
+                </af:panelFormLayout>
+            </af:gridCell>
+        </af:gridRow>
+    </af:panelGridLayout>
+</ui:composition>

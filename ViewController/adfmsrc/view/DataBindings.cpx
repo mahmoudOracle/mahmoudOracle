@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Application xmlns="http://xmlns.oracle.com/adfm/application" version="12.2.1.9.14" id="DataBindings"
+             SeparateXMLFiles="false" Package="view" ClientType="Generic">
+  <definitionFactories>
+    <factory nameSpace="http://xmlns.oracle.com/adf/controller/binding"
+             className="oracle.adf.controller.internal.binding.TaskFlowBindingDefFactoryImpl"/>
+    <dtfactory className="oracle.adf.controller.internal.dtrt.binding.BindingDTObjectFactory"/>
+  </definitionFactories>
+  <pageMap>
+    <page path="/empData.jsf" usageId="view_empDataPageDef"/>
+    <page path="/CreatingMembers.jsf" usageId="view_CreatingMembersPageDef"/>
+    <page path="/empData2.jsf" usageId="view_empData2PageDef"/>
+    <page path="/updateEmpSal4Methods.jsf" usageId="view_updateEmpSal4MethodsPageDef"/>
+    <page path="/countries.jsff" usageId="view_countriesPageDef"/>
+    <page path="/PassingParamsBetweenBTF.jsf" usageId="view_PassingParamsBetweenBTFPageDef"/>
+    <page path="/WEB-INF/execute-with-param-tf.xml#execute-with-param-tf@ExecuteWithParams"
+          usageId="view_execute_with_param_tf_execute_with_param_tf_ExecuteWithParamsPageDef"/>
+    <page path="/empData.jsff" usageId="view_empDataPageDef1"/>
+    <page path="/execWithParamTFPage.jsf" usageId="view_execWithParamTFPagePageDef"/>
+    <page path="/insertingVals.jsff" usageId="view_insertingValsPageDef"/>
+  </pageMap>
+  <pageDefinitionUsages>
+    <page id="view_empDataPageDef" path="view.pageDefs.empDataPageDef"/>
+    <page id="view_CreatingMembersPageDef" path="view.pageDefs.CreatingMembersPageDef"/>
+    <page id="view_empData2PageDef" path="view.pageDefs.empData2PageDef"/>
+    <page id="view_updateEmpSal4MethodsPageDef" path="view.pageDefs.updateEmpSal4MethodsPageDef"/>
+    <page id="view_countriesPageDef" path="view.pageDefs.countriesPageDef"/>
+    <page id="view_PassingParamsBetweenBTFPageDef" path="view.pageDefs.PassingParamsBetweenBTFPageDef"/>
+    <page id="view_execute_with_param_tf_execute_with_param_tf_ExecuteWithParamsPageDef"
+          path="view.pageDefs.execute_with_param_tf_execute_with_param_tf_ExecuteWithParamsPageDef"/>
+    <page id="view_empDataPageDef1" path="view.pageDefs.empDataPageDef1"/>
+    <page id="view_execWithParamTFPagePageDef" path="view.pageDefs.execWithParamTFPagePageDef"/>
+    <page id="view_insertingValsPageDef" path="view.pageDefs.insertingValsPageDef"/>
+  </pageDefinitionUsages>
+  <dataControlUsages>
+    <BC4JDataControl id="AppModuleAMDataControl" Package="model.AppModule"
+                     FactoryClass="oracle.adf.model.bc4j.DataControlFactoryImpl" SupportsTransactions="true"
+                     SupportsFindMode="true" SupportsRangesize="true" SupportsResetState="true"
+                     SupportsSortCollection="true" Configuration="AppModuleAMLocal" syncMode="Immediate"
+                     xmlns="http://xmlns.oracle.com/adfm/datacontrol"/>
+  </dataControlUsages>
+</Application>
