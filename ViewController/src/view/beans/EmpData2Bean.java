@@ -25,7 +25,7 @@ public class EmpData2Bean {
     private RichOutputText outBindToSetVal;
 
     public EmpData2Bean() {
-    }//testing git
+    }//testing git  checking again
 
     public void setPassword(String password) {
         setMsg("Setting Password");
